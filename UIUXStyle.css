@@ -1,0 +1,138 @@
+/* Basic container setup */
+.resume-container {
+    display: flex;
+    width: 210mm; /* A4 width */
+    height: 320mm; /* A4 height */
+    margin: auto; /* Center horizontally */
+    padding: 15mm; /* Padding */
+    border: 1px solid #ddd; /* Optional border */
+    box-sizing: border-box; /* Include padding and border in dimensions */
+    background-color: white; /* Background color */
+    overflow: hidden; /* Hide overflow to prevent content spill */
+}
+
+/* Section A: Sidebar with background color */
+.sidebar {
+    width: 30%;
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 5mm;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* Include padding in width */
+    overflow-y: auto; /* Scroll if content overflows */
+}
+
+/* Profile image styles */
+.profile-image img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* Profile info styles */
+.profile-info {
+    margin-top: 10mm;
+}
+
+.profile-info h3 {
+    color: #333;
+    margin-bottom: 5mm;
+}
+
+.profile-info p {
+    margin: 2mm 0; /* Reduced margin for compact spacing */
+}
+
+/* Contact info styles */
+.contact-info {
+    margin-top: 10mm;
+}
+
+.contact-info h3 {
+    color: #333;
+    margin-bottom: 5mm;
+}
+
+.contact-info p {
+    margin: 2mm 0; /* Reduced margin for compact spacing */
+}
+
+/* Section B: Main content */
+.main-content {
+    width: 70%;
+    padding: 5mm;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Name at the top with a background color */
+.header {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 5mm;
+    text-align: center;
+    margin-bottom: 10mm;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header .tag {
+    display: block;
+    margin-top: 3mm; /* Space between name and tag */
+    color: #fff; /* Color of the tag text */
+    font-size: 12px; /* Adjust the font size */
+    font-weight: normal; /* Normal weight for less emphasis */
+}
+
+/* Education styles */
+.education {
+    margin-bottom: 15mm;
+}
+
+.edu-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10mm;
+}
+
+.edu-item p {
+    margin: 1mm 0; /* Reduced margin for compact spacing */
+}
+
+.edu-item strong {
+    display: inline-block;
+    width: 150px; /* Fixed width for labels */
+}
+
+/* Experience styles */
+.experience {
+    margin-bottom: 15mm;
+}
+
+.exp-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10mm;
+}
+
+.exp-item p {
+    margin: 1mm 0; /* Reduced margin for compact spacing */
+}
+
+.exp-item strong {
+    display: inline-block;
+    width: 150px; /* Fixed width for labels */
+}
+
+/* Skills list styles */
+.skills-list {
+    list-style-type: disc;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.skills-list li {
+    margin-bottom: 2mm; /* Reduced margin for compact spacing */
+}

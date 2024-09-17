@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartResume</title>
+    <link rel="stylesheet" href="UIUXStyle.css"> <!-- Ensure this path is correct -->
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Section A -->
+        <div class="sidebar">
+            <div class="profile-image">
+                <img src="/images/maleresumeicon.jpeg" alt="Profile Image">
+            </div>
+            <div class="profile-info">
+                <h3>Profile</h3>
+                <p>Date of Birth: January 1, 1990</p>
+                <p>Country: USA</p>
+                <p>City: New York</p>
+                <p>Twitter: <a href="https://twitter.com/yourhandle" target="_blank">@yourhandle</a></p>
+                <p>Current Occupation: UI/UX Designer</p>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Email: john@example.com</p>
+                <p>Phone: +1234567890</p>
+            </div>
+        </div>
+
+        <!-- Section B -->
+        <div class="main-content">
+            <div class="header">
+                <h1>John Doe</h1>
+                <span class="tag">UI/UX Designer</span>
+            </div>
+            <div class="content">
+                <h2>Education</h2>
+                <div class="education">
+                    <div class="edu-item">
+                        <p><strong>School Name:</strong> [School Name]</p>
+                        <p><strong>Field of Study:</strong> [Field of Study]</p>
+                    </div>
+                    <div class="edu-item">
+                        <p><strong>Degree:</strong> [Degree]</p>
+                        <p><strong>School Location:</strong> [Location]</p>
+                    </div>
+                    <p><strong>Graduation Month/Year:</strong> [Month, Year]</p>
+                </div>
+
+                <h2>Experience</h2>
+                <div class="experience">
+                    <div class="exp-item">
+                        <p><strong>Job Title:</strong> [Job Title]</p>
+                        <p><strong>Organization Name:</strong> [Organization]</p>
+                    </div>
+                    <div class="exp-item">
+                        <p><strong>State:</strong> [State]</p>
+                        <p><strong>Country:</strong> [Country]</p>
+                    </div>
+                    <div class="exp-item">
+                        <p><strong>Start Year:</strong> [Start Year]</p>
+                        <p><strong>End Year:</strong> [End Year]</p>
+                    </div>
+                    <div class="exp-item">
+                        <p><strong>Start Month:</strong> [Start Month]</p>
+                        <p><strong>End Month:</strong> [End Month]</p>
+                    </div>
+                </div>
+
+                <h2>Skills</h2>
+                <ul class="skills-list">
+                    <li>Web Development</li>
+                    <li>UI/UX Design</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <button id="downloadBtn" onclick="downloadResume()">Download Resume</button>
+
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+</body>
+</html>

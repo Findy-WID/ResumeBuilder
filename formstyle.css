@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+:root {
+    --primary-color: #ff833e;
+    --primary-color-dark: #a24d20;
+    --text-dark: #333333;
+    --text-light: #767268;
+    --white: #ffffff;
+    --max-width: 1200px;
+    --header-font: "Bebas Neue", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+section h1 {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 2.5rem; /* Adjusted for better readability */
+}
+
+section h2 {
+    color: var(--primary-color-dark);
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.para {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+form {
+    margin-top: 30px;
+}
+/* No additional CSS needed as long as the existing rules are applied correctly */
+.input-styling {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.input-styling input {
+    flex: 1 1 calc(50% - 20px);
+}
+
+/* If needed, add specific rules for the last input field if it still causes issues */
+.input-styling input:nth-last-child(2) {
+    flex-basis: calc(50% - 20px); /* Ensure last two fields fit side by side */
+}
+
+
+
+input {
+    padding: 12px; /* Adjusted for better visibility */
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+}
+button {
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-bottom: 30px;
+}
+button:hover {
+    background-color: var(--primary-color-dark);
+}
