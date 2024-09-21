@@ -31,14 +31,15 @@
         <!-- Section B -->
         <div class="main-content">
             <div class="header">
-                <h1>John Doe</h1>
-                <span class="tag">UI/UX Designer</span>
+                <h1 id="fullName">jhon doe</h1>
+                <span id="title" class="tag">UI/UX Designer</span>
             </div>
             <div class="content">
                 <h2>Education</h2>
                 <div class="education">
                     <div class="edu-item">
-                        <p><strong>School Name:</strong> [School Name]</p>
+                        <strong>School Name:</strong>
+                        <p ></p>
                         <p><strong>Field of Study:</strong> [Field of Study]</p>
                     </div>
                     <div class="edu-item">
@@ -48,7 +49,7 @@
                     <p><strong>Graduation Month/Year:</strong> [Month, Year]</p>
                 </div>
 
-                <h2>Experience</h2>
+                <h2 id="fullName">Experience</h2>
                 <div class="experience">
                     <div class="exp-item">
                         <p><strong>Job Title:</strong> [Job Title]</p>
@@ -78,6 +79,51 @@
         </div>
     </div>
     <button id="downloadBtn" onclick="downloadResume()">Download Resume</button>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Retrieve data from localStorage
+            const resumeDataString = localStorage.getItem('resumeData');
+            if (resumeDataString) {
+                const resumeData = JSON.parse(resumeDataString);
+        
+                // Populate the HTML with the retrieved data
+                document.getElementById('fullName').textContent = `${resumeData.fname} ${resumeData.lname}`;
+                document.getElementById('title').textContent = resumeData.title;
+                document.getElementById('dob').textContent = resumeData.dob;
+                document.getElementById('country').textContent = resumeData.country;
+                document.getElementById('city').textContent = resumeData.city;
+                document.getElementById('currentOccupation').textContent = resumeData.jobTitle;
+                document.getElementById('email').textContent = resumeData.email;
+                document.getElementById('phone').textContent = resumeData.phone;
+                document.getElementById('schoolName').textContent = resumeData.schName;
+                document.getElementById('fieldOfStudy').textContent = resumeData.fos;
+                document.getElementById('degree').textContent = resumeData.degree;
+                document.getElementById('schoolLocation').textContent = resumeData.location;
+                document.getElementById('graduationDate').textContent = `${resumeData.gmonth} ${resumeData.gyear}`;
+                document.getElementById('jobTitle').textContent = resumeData.jobTitle;
+                document.getElementById('organization').textContent = resumeData.nog;
+                document.getElementById('state').textContent = resumeData.state;
+                document.getElementById('expCountry').textContent = resumeData.expCountry;
+                document.getElementById('startDate').textContent = `${resumeData.startMonth} ${resumeData.startYear}`;
+                document.getElementById('endDate').textContent = `${resumeData.endMonth} ${resumeData.endYear}`;
+        
+                // Populate skills
+                const skillsList = document.getElementById('skillsList');
+                skillsList.innerHTML = ''; // Clear existing skills
+                ['skill1', 'skill2', 'skill3'].forEach(skillKey => {
+                    if (resumeData[skillKey]) {
+                        const li = document.createElement('li');
+                        li.textContent = resumeData[skillKey];
+                        skillsList.appendChild(li);
+                    }
+                });
+            } else {
+                console.log('No resume data found in localStorage');
+            }
+        });
+        </script>
 
     <script src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>

@@ -1,102 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SmartResume</title>
-    <link rel="stylesheet" href="formstyle.css">
-</head>
-<body>
-    <main class="container" id="dataContainer">
-        <!--Main Div container-->
-        <div class="information">
+    <link rel="stylesheet" href="formstyle.css" />
+  </head>
+  <body>
+        <section>
+          <h1>User Information</h1>
+          <p>Fill out the form below to provide employers with your details.</p>
+        </section>
 
-            <section>
-                <h1>User Information</h1>
-                <p class="para">Let's get to know you better. Employers need certain basic information to employ you.</p>
-                <p>Kindly fill out the form below! Shall we?</p>
-            </section>
+      <form id="resumeForm">
+        <!-- Contact Information -->
+        <section>
+          <h2>Contact Information</h2>
+          <div class="input-styling">
+            <input type="text" name="fname" id="fname" placeholder="First Name" required />
+            <input type="text" name="lname" id="lname" placeholder="Last Name" required />
+            <input type="text" name="title" id="title" placeholder="Job Description" required />
+            <input type="tel" name="phone" id="phone" placeholder="Phone Number" required />
+            <input type="text" name="country" id="country" placeholder="Country" required />
+            <input type="text" name="city" id="city" placeholder="City" required />
+            <input type="email" name="email" id="email" placeholder="Email" required />
+            <input type="date" name="dob" id="dob" placeholder="Date of Birth" required />
+            <input type="text" name="socials" id="socials" placeholder="Twitter Handle" />
+          </div>
+        </section>
 
-            <!--Section 1: User's Contact-->   
-            <section>
-                <div class="contact">
-                    <h2>Contact</h2>
-                    <p class="para">To get started, let's ensure employers can reach you. Input at least your name, email, and phone number.</p>
-                    <p class="upload">Do you have an existing resume? <a href="#">Upload here</a> to fill out form</p>
-                    <form action="#">
-                        <div class="input-styling">
-                            <input type="text" id="fname" placeholder="First Name" required>
-                            <input type="text" id="lname" placeholder="Last Name" required>
-                            <input type="text" id="title" placeholder="Job Description" required>
-                            <input type="number" id="phone" placeholder="Phone Number" required>
-                            <input type="text" id="country" placeholder="Country">
-                            <input type="text" id="city" placeholder="City">
-                            <input type="email" id="email" placeholder="Email" required>
-                            <input type="number" id="DOB" placeholder="Date of Birth">
-                            <input type="text" id="socials" placeholder="Twitter Handle">
-                        </div>
-                    </form>
-                </div>
-            </section>
+        <!-- Experience Information -->
+        <section>
+          <h2>Experience</h2>
+          <div class="input-styling">
+            <input type="text" name="jobTitle" id="jobTitle" placeholder="Job Title" required />
+            <input type="text" name="nog" id="nog" placeholder="Name of Organization" />
+            <input type="text" name="expCountry" id="expCountry" placeholder="Country" />
+            <input type="text" name="state" id="state" placeholder="State" />
+            <input type="text" name="expCity" id="expCity" placeholder="City" />
+            <input type="text" name="startMonth" id="startMonth" placeholder="Start Month" />
+            <input type="number" name="startYear" id="startYear" placeholder="Start Year" />
+            <input type="text" name="endMonth" id="endMonth" placeholder="End Month" />
+            <input type="number" name="endYear" id="endYear" placeholder="End Year" />
+          </div>
+        </section>
 
-            <!--Section 2: User's Experience-->
-            <section id="topEx">
-                <div class="experience">
-                    <h2>Experience</h2>
-                    <p class="para">Your employers would like to know if you've had any previous experience. We promise, this would be easy!</p>
-                    <form action="">
-                        <div class="input-styling">
-                            <input type="text" id="JobTitle" placeholder="Job Title">
-                            <input type="text" id="NOG" placeholder="Name of Organisation">
-                            <input type="text" id="country" placeholder="Country">
-                            <input type="text" id="state" placeholder="State">
-                            <input type="text" id="city" placeholder="City">
-                            <input type="text" id="smonth" placeholder="Start Month">
-                            <input type="number" id="syear" placeholder="Start Year">
-                            <input type="text" id="emonth" placeholder="End Month">
-                            <input type="number" id="eyear" placeholder="End Year">
-                        </div>
-                    </form>   
-                </div>
-            </section>
+        <!-- Education Information -->
+        <section>
+          <h2>Education</h2>
+          <div class="input-styling">
+            <input type="text" name="schName" id="schName" placeholder="School Name" required />
+            <input type="text" name="location" id="location" placeholder="School Location" required />
+            <input type="text" name="degree" id="degree" placeholder="Degree or Program" required />
+            <input type="text" name="fos" id="fos" placeholder="Field of Study" required />
+            <input type="text" name="gmonth" id="gmonth" placeholder="Graduation Month" />
+            <input type="number" name="gyear" id="gyear" placeholder="Graduation Year" />
+          </div>
+        </section>
 
-            <!--Section 3: User's Education-->
+        <!-- Skills Information -->
+        <section>
+          <h2>Skills</h2>
+          <div class="input-styling">
+            <input type="text" name="skill1" id="skill1" placeholder="Skill 1" />
+            <input type="text" name="skill2" id="skill2" placeholder="Skill 2" />
+            <input type="text" name="skill3" id="skill3" placeholder="Skill 3" />
+          </div>
+        </section>
 
-            <section id="topEd">
-                <div class="education">
-                    <h2>Education</h2>
-                    <p class="para">Bravo! You're doing just fine. Now let's get to know a little of your educational background.</p>
-                    <form action="#">
-                        <div class="input-styling">
-                            <input type="text" id="Schname" placeholder="School Name">
-                            <input type="text" id="Location" placeholder="School Location">
-                            <input type="text" id="Degree" placeholder="Degree or Program">
-                            <input type="text" id="FOS" placeholder="Field of Study">
-                            <input type="text" id="GMonth" placeholder="Graduation Month">
-                            <input type="text" id="GYear" placeholder="Graduation Year">
-                        </div>
-                    </form>
-                </div>
-            </section>
-            
+        <!-- Submit Button -->
+        <button type="submit">Submit Resume</button>
+    </form>
 
-            <!--Section 4: User's Skills-->
-            <section id="topSkill">
-                <div class="skills">
-                    <h2>Skills</h2>
-                    <p class="para">You're doing just fine! Let us know the relevant skills you have for the job you are applying for.</p>
-                    <form action="">
-                        <div class="input-styling">
-                            <input type="text" id="skill1" placeholder="e.g Community Engagement">
-                            <input type="text" id="skill2">
-                            <input type="text" id="skill3">
-                        </div>
-                    </form>
-                </div>
-            </section>
-            <button type="submit" onclick="storeData()" id="submitBtn">Submit</button>
-        </div>
+    <!-- Button to Navigate (Initially Hidden) -->
+    <button id="navigateBtn" style="display:none;">Go to UI/UX Resume</button>
+
+
+      <script src="main.js"></script>
     </main>
-    <script src="main.js"></script>
-</body>
+  </body>
 </html>
