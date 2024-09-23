@@ -463,6 +463,8 @@ populateResume();
 
     html2pdf().from(resumeContainer).set(opt).save();
   }
+  // Add event listener to the download button
+document.getElementById("downloadBtn").addEventListener("click", downloadResume);
 
   // Add click event to the navigate button
   navigateBtn.addEventListener("click", () => {
@@ -479,3 +481,4 @@ populateResume();
     }
   });
 });
+
