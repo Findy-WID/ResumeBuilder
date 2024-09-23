@@ -15,16 +15,16 @@
             </div>
             <div class="profile-info">
                 <h3>Profile</h3>
-                <p>Date of Birth: January 1, 1990</p>
-                <p>Country: USA</p>
-                <p>City: New York</p>
-                <p>Twitter: <a href="https://twitter.com/yourhandle" target="_blank">@yourhandle</a></p>
-                <p>Current Occupation: UI/UX Designer</p>
+                <p id="dob">Date of Birth: January 1, 1990</p>
+                <p id="country">Country: USA</p>
+                <p id="city">City: New York</p>
+                <p id="twitter">Twitter: <a href="https://twitter.com/yourhandle" target="_blank">@yourhandle</a></p>
+                <p id="currentOccupation">Current Occupation: UI/UX Designer</p>
             </div>
             <div class="contact-info">
                 <h3>Contact Information</h3>
-                <p>Email: john@example.com</p>
-                <p>Phone: +1234567890</p>
+                <p id="email">Email: john@example.com</p>
+                <p id="phone">Phone: +1234567890</p>
             </div>
         </div>
 
@@ -38,39 +38,36 @@
                 <h2>Education</h2>
                 <div class="education">
                     <div class="edu-item">
-                        <strong>School Name:</strong>
+                        <strong id="schoolName">School Name:</strong>
                         <p ></p>
-                        <p><strong>Field of Study:</strong> [Field of Study]</p>
+                        <p id="fieldOfStudy"><strong>Field of Study:</strong> [Field of Study]</p>
                     </div>
                     <div class="edu-item">
-                        <p><strong>Degree:</strong> [Degree]</p>
-                        <p><strong>School Location:</strong> [Location]</p>
+                        <p id="degree"><strong>Degree:</strong> [Degree]</p>
+                        <p id="schoolLocation"><strong>School Location:</strong> [Location]</p>
                     </div>
-                    <p><strong>Graduation Month/Year:</strong> [Month, Year]</p>
+                    <p id="graduationDate"><strong>Graduation Month/Year:</strong> [Month, Year]</p>
                 </div>
 
-                <h2 id="fullName">Experience</h2>
+                <h2 id="">Experience</h2>
                 <div class="experience">
                     <div class="exp-item">
-                        <p><strong>Job Title:</strong> [Job Title]</p>
-                        <p><strong>Organization Name:</strong> [Organization]</p>
+                        <p id="jobTitle"><strong>Job Title:</strong> [Job Title]</p>
+                        <p id="organization"><strong>Organization Name:</strong> [Organization]</p>
                     </div>
                     <div class="exp-item">
-                        <p><strong>State:</strong> [State]</p>
-                        <p><strong>Country:</strong> [Country]</p>
+                        <p id="state"><strong>State:</strong> [State]</p>
+                        <p id="expCountry"><strong>Country:</strong> [Country]</p>
                     </div>
                     <div class="exp-item">
-                        <p><strong>Start Year:</strong> [Start Year]</p>
-                        <p><strong>End Year:</strong> [End Year]</p>
+                        <p id="startDate"><strong>Start Date:</strong> [Start Month, Start Year]</p>
+                        <p id="endDate"><strong>End Date:</strong> [End Month, End Year]</p>
                     </div>
-                    <div class="exp-item">
-                        <p><strong>Start Month:</strong> [Start Month]</p>
-                        <p><strong>End Month:</strong> [End Month]</p>
-                    </div>
+                    
                 </div>
 
                 <h2>Skills</h2>
-                <ul class="skills-list">
+                <ul class="skills-list" id="skillsList">
                     <li>Web Development</li>
                     <li>UI/UX Design</li>
                     <li>JavaScript</li>
@@ -95,6 +92,7 @@
                 document.getElementById('country').textContent = resumeData.country;
                 document.getElementById('city').textContent = resumeData.city;
                 document.getElementById('currentOccupation').textContent = resumeData.jobTitle;
+                document.getElementById('twitter').textContent = resumeData.twitter
                 document.getElementById('email').textContent = resumeData.email;
                 document.getElementById('phone').textContent = resumeData.phone;
                 document.getElementById('schoolName').textContent = resumeData.schName;
